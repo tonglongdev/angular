@@ -5,8 +5,17 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'PROJECT';
+  data = {
+    title: 'PROJECT',
+  };
+
+  onClick() {
+    alert('yoooooooooooooo');
+  }
+  onKeyUp(newTitle: string) {
+    this.data.title = newTitle;
+  }
 }
